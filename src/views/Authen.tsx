@@ -1,13 +1,14 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Alert, Linking, StyleSheet, Text, View } from "react-native"
 import { commonStyle } from "../assets/styles"
 import CustomButton from "../components/CustomButton"
 
-const Authen = () => {
+const Authen = async () => {
 
 
   const connect = async () => {
-    const url = 'https://www.baidu.com'
+    // const url = 'https://www.baidu.com'
+    const url = 'http://192.168.50.200:8080/index.html'
 
     const supported = await Linking.canOpenURL(url)
 
@@ -17,6 +18,10 @@ const Authen = () => {
   }
   
   const restart = () => { }
+
+  // console.log(await Linking.getInitialURL())
+
+  // useEffect(() => console.log('123'), [Linking.getInitialURL()])
   
   const style = StyleSheet.create({
     main: {
