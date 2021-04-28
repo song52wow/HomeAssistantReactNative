@@ -1,9 +1,9 @@
 import React, { useEffect } from "react"
-import { Alert, Linking, StyleSheet, Text, View } from "react-native"
+import { Alert, AppState, Linking, StyleSheet, Text, View } from "react-native"
 import { commonStyle } from "../assets/styles"
 import CustomButton from "../components/CustomButton"
 
-const Authen = async () => {
+const Authen = () => {
 
 
   const connect = async () => {
@@ -18,6 +18,15 @@ const Authen = async () => {
   }
   
   const restart = () => { }
+
+  useEffect(() => AppState.addEventListener('change', state => {
+    if (state === 'active') {
+      Linking.getInitialURL().then(console.log)
+    }
+  }))
+
+  // Linking.getInitialURL().then(console.log)
+
 
   // console.log(await Linking.getInitialURL())
 
