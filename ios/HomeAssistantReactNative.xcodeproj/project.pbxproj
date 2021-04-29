@@ -145,7 +145,6 @@
 				BFDE9CBD49F607EA5797E9AD /* Pods-HomeAssistantReactNative-HomeAssistantReactNativeTests.debug.xcconfig */,
 				477C313E7142BCA6157DC060 /* Pods-HomeAssistantReactNative-HomeAssistantReactNativeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
